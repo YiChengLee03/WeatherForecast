@@ -29,7 +29,7 @@ def main():
         time = forecast['dt_txt']
         temp = "{:.2f}".format(forecast['main']['temp'])
         weather_id = forecast['weather'][0]['id']
-        if weather_id < 800 or temp < 10:
+        if weather_id < 800 or int(temp) < 10:
             weather = forecast['weather'][0]['main']
             send_notifications(time, temp, weather)
             break
