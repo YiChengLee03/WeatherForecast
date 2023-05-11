@@ -33,7 +33,6 @@ def main():
             weather = forecast['weather'][0]['main']
             send_notifications(time, temp, weather)
             break
-        
 
 if __name__ == "__main__":
     main()
